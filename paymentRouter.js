@@ -9,7 +9,7 @@ let user = {}
 const getOrCreateCustomer = async () => {
     const customers = await stripe.customers.list();
     if (customers.data.length === 0) {
-        user.customer = await stripe.customers.create({email: "milad@woshapp.se"});
+        user.customer = await stripe.customers.create({email: "milad@test.com"});
     } else {
         user.customer = customers.data[0]
     }
